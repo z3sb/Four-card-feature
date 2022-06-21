@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Poppins', sans-serif;
+  background-color: hsl(0, 0%, 98%);
+}
+
+header{
+  text-align: center;
+  padding: 50px;
+}
+header h1{
+  font-weight: 200;
+  color: hsl(234, 12%, 34%);
+}
+header h2{
+  font-size: 32px;
+  color: hsl(234, 12%, 34%);
+}
+header p{
+  color: hsl(229, 6%, 66%);
+  width: 45%;
+  margin: auto;
+}
+.container{
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(2, auto);
+  grid-template-areas: ". . . two two two . . ." "one one one three three three four four four " ;
+  grid-gap: 20px;
+  padding: 0 100px;
+}
+section{
+  background-color: white;
+  padding: 30px;
+  box-shadow: 3px 5px 10px 0 rgb(69, 83, 121);
+  border-radius: 10px;
+}
+section h2{
+  color: hsl(234, 12%, 34%);
+  margin-bottom: 10px;
+}
+section p{
+  color: hsl(229, 6%, 66%);
+}
+section .image{
+  text-align: right;
+  margin: 53px 0 0 0;
+}
+.one{
+  grid-area: one;
+  margin-top: -100px;
+  height: fit-content;
+  border-top: 5px solid hsl(180, 62%, 55%);
+}
+.two{
+  grid-area: two;
+  border-top: 5px solid hsl(0, 78%, 62%);
+}
+.three{
+  grid-area: three;
+  border-top: 5px solid hsl(34, 97%, 64%);
+}
+.four{
+  grid-area: four;
+  margin-top: -100px;
+  height: fit-content;
+  border-top: 5px solid hsl(212, 86%, 64%);
+}
+footer{
+  margin:30px 20px 0;
+  text-align: center;
+  color: hsl(234, 12%, 34%);;
+}
+footer a{
+  text-decoration: none;
+}
+@media (max-width:992px){
+  .container{
+    padding: 20px;
+  }
+  section{
+    width: 100%;
+    text-align: center;
+  }
+  section .image{
+    text-align: center;
+  }
+}
+@media (max-width:767px) {
+  .container{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    align-items: center;
+  }
+  .one , .four{
+    margin: 0;
+  }
+  header{
+    padding: 50px 30px;
+  }
+  header h1{
+    font-size: 25px;
+  }
+  header h2{
+    font-size: 25px;
+    margin-bottom: 15px;
+  }
+  header p{
+    width: 100%;
+  }
+}
